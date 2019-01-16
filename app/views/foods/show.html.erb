@@ -1,0 +1,18 @@
+<br/>
+<br/>
+<center>
+	<div class="card" style="width: 75rem; height:40em;">
+	  <img class="card-img-top" src="http://i.milliyet.com.tr/YeniAnaResim/2017/05/18/fft99_mf9150358.Jpeg" alt="Card image cap">
+	  <div class="card-body">
+	    <h5 class="card-title"><%= @food.title %></h5>
+	    <p class="card-text"><%= @food.repice %></p>
+	  </div>
+	</div>
+</center>
+
+<center>
+	<%= link_to 'Edit', edit_food_path(@food), :class => "btn" %> |
+	<%= link_to 'Back', foods_path, :class => "btn" %>	
+</center>
+
+

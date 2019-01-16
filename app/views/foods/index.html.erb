@@ -1,0 +1,36 @@
+<center>
+  <p id="notice"><%= notice %></p>
+
+  <h1>Foods</h1>
+
+</center>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="box">
+  <div class="container">
+    <div class="row">
+        <% @foods.each do |food| %>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12  ">             
+          <div class="box-part text-center">    
+            
+            <img src="http://i.milliyet.com.tr/YeniAnaResim/2017/05/18/fft99_mf9150358.Jpeg" alt="..." class="img-thumbnail food-img">
+                       
+            <div class="title">
+              <h4><%= food.title %></h4>
+            </div>
+                          
+            <div class="text">
+              <span><%= food.repice %></span>
+            </div>
+                 
+            <a class="btn btn-light" href="<%= food_path(food.id) %>" role="button">Tarif burada :D</a>
+          </div>
+        </div>
+        <% end %>
+    </div>    
+  </div>  
+</div>
+
+<center>
+  <%= link_to 'New Food', new_food_path, :class => "btn" %>
+</center>

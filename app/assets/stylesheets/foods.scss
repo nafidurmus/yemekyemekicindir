@@ -1,0 +1,48 @@
+// Place all the styles related to the Foods controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body{
+    background: #eee;
+}
+span{
+    font-size:15px;
+}
+a{
+  text-decoration:none; 
+  color: #0062cc;
+  border-bottom:2px solid #0062cc;
+}
+.box{
+    padding:60px 0px;
+}
+
+.box-part{
+    background:#FFF;
+    border-radius:0;
+    padding:60px 10px;
+    margin:30px 0px;
+}
+.text{
+    margin:20px 0px;
+}
+
+.fa{
+     color:#4183D7;
+}
+
+  .card-img{
+   width: 100%!important;
+   height: 200px!important;
+   object-fit: cover;
+}
+
+.food-img {
+    width:75%;
+    height: 230px;
+}
+
+.nounderline {
+   text-decoration: none;
+}
