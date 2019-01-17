@@ -1,5 +1,10 @@
-<h1>New Food</h1>
+<center>
+	<h1>Add New Food</h1>
+</center>
+	<%= render 'form', food: @food %>
+<center>
+	<%= link_to 'Back', foods_path, :class => "bg-info btn" %>	
+</center>
+	<br>
+	<br>
 
-<%= render 'form', food: @food %>
-
-<%= link_to 'Back', foods_path %>
