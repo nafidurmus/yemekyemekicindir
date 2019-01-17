@@ -18,6 +18,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.2', '>= 4.2.1'
 gem 'simple_form', '~> 4.1'
 gem 'jquery-rails'
+gem "paperclip", "~> 6.0.0"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

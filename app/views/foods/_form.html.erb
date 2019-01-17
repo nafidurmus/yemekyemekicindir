@@ -1,9 +1,11 @@
 <div class="container">
 	 <div class="box-part text-center">   
-	<%= simple_form_for(@food) do |f| %>
+	<%= simple_form_for @food, url: foods_path do |f| %>
 	  <%= f.error_notification %>
 	  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
+	  <div>
+	  	 <%= f.input :avatar, as: :file %>
+	  </div>
 	  <div class="form-inputs">
 	    <%= f.input :title %>
 	    <%= f.input :repice %>
@@ -12,6 +14,7 @@
 	  <div class="form-actions button btn-success">
 	    <%= f.button :submit %>
 	  </div>
+
 	<% end %>
 	</div>
 </div>
