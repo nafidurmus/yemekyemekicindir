@@ -69,6 +69,7 @@ class FoodsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def food_params
-      params.require(:food).permit(:title, :repice, :avatar)
+      params.require(:food).permit(:title, :repice, :avatar, :prep_time, :cook_time , :level_of_difficulty , :serving_time , :ingredients)
     end
 end
+

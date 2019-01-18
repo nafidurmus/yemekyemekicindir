@@ -1,18 +1,52 @@
 <br/>
 <br/>
 <center>
-	<div class="card" style="width: 75rem; height:40em;">
+	<div class="card" style="width: 75rem; height:75em;">
+	   <h4 class="card-title font-weight-bold"><%= @food.title %></h5>
 	  <img class="card-img-top" src=<%= @food.avatar.url %> alt="Card image cap">
 	  <div class="card-body">
-	    <h5 class="card-title"><%= @food.title %></h5>
-	    <p class="card-text"><%= @food.repice %></p>
+	    
+
+	    <div class="container navbar-light bg-info">
+		  <div class="row">
+		    <div class="col-md">
+		      Prep Time :<%= @food.prep_time %>
+		    </div>
+		    <div class="col-md">
+		      Cook Time : <%= @food.cook_time %>
+		    </div>
+		    <div class="col-md">
+		      Level of Difficulty:  <%= @food.level_of_difficulty %> 
+		    </div>
+		    <div class="col-md">
+		      Serving Time : <%= @food.serving_time %> 
+		    </div>
+		  </div>
+		</div>
+
+		<div class="container box">
+		  <div class="row ">
+		    <div class="col-md">Ingredients <br> <br>
+		    	<ul>
+		    		<p class="text-left"><%= @food.ingredients %></p>
+		    	</ul>
+		    	 
+		    </div>
+		    <div class="col-md"> Repice <br> <br>
+		    	<ul>
+		    		<p class="text-left"><%= @food.repice %></p>
+		    	</ul>
+		    			      
+		    </div>
+		  </div>
+		</div>
 	  </div>
 	</div>
 </center>
 
 <center>
-	<%= link_to 'Edit', edit_food_path(@food), :class => "btn" %> |
-	<%= link_to 'Back', foods_path, :class => "btn" %>	
+	<%= link_to 'Edit', edit_food_path(@food), :class => "btn btn-light" %> |
+	<%= link_to 'Back', foods_path, :class => "btn btn-light" %>	
 </center>
 
 

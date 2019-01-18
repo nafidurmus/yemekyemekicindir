@@ -1,5 +1,5 @@
 <center>
-  <h1>Foods</h1>
+  <h1>Recipes</h1>
 </center>
 
 <div class="box">
@@ -9,13 +9,13 @@
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12  ">             
           <div class="box-part text-center">    
             
-            <img src=<%= food.avatar.url(:medium) %> alt="..." class="img-thumbnail food-img">
+            <img src=<%= food.avatar.url(:medium) %>  alt="..." class="img-thumbnail food-img">
                        
             <div class="title">
               <h4><%= food.title %></h4>
             </div>
                           
-            <div class="text">
+            <div class="text text-truncate">
               <span><%= food.repice %></span>
             </div>
             <a class="btn btn-light" href="<%= food_path(food) %>"

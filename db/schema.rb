@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_17_101843) do
+ActiveRecord::Schema.define(version: 2019_01_18_083504) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,11 @@ ActiveRecord::Schema.define(version: 2019_01_17_101843) do
     t.integer "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string "slug"
+    t.string "prep_time"
+    t.string "cook_time"
+    t.string "level_of_difficulty"
+    t.string "serving_time"
+    t.text "ingredients"
     t.index ["slug"], name: "index_foods_on_slug", unique: true
   end
 
