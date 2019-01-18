@@ -1,8 +1,9 @@
 <br/>
 <br/>
-<center>
-	<div class="card" style="width: 75rem; height:75em;">
-	   <h4 class="card-title font-weight-bold"><%= @food.title %></h5>
+	<div class="card" style="width: 75rem; height:85em;">
+		<center>
+			<h4 class="card-title font-weight-bold"><%= @food.title %></h5>
+		</center>
 	  <img class="card-img-top" src=<%= @food.avatar.url %> alt="Card image cap">
 	  <div class="card-body">
 	    
@@ -25,24 +26,27 @@
 		</div>
 
 		<div class="container box">
-		  <div class="row ">
-		    <div class="col-md">Ingredients <br> <br>
+		  <div class="row">
+		    <div class="col-sm">
+		    	<div class="text-center">
+		    		<h5 class="font-weight-bold"> Ingredients </h5> <br> 
+		    	</div>
 		    	<ul>
-		    		<p class="text-left"><%= @food.ingredients %></p>
+		    		<p class="text-left"><%= markdown(@food.ingredients) %></p>
 		    	</ul>
-		    	 
 		    </div>
-		    <div class="col-md"> Repice <br> <br>
+		    <div class="col-md"> 
+		    	<div class="text-center">
+		    		<h5 class="font-weight-bold">Repice </h5> <br> 
+		    	</div>
 		    	<ul>
-		    		<p class="text-left"><%= @food.repice %></p>
-		    	</ul>
-		    			      
+		    		<p class="text-left"><%= markdown(@food.repice) %></p>
+		    	</ul>	      
 		    </div>
 		  </div>
 		</div>
 	  </div>
 	</div>
-</center>
 
 <center>
 	<%= link_to 'Edit', edit_food_path(@food), :class => "btn btn-light" %> |

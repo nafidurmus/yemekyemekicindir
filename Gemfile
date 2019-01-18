@@ -20,6 +20,7 @@ gem 'simple_form', '~> 4.1'
 gem 'jquery-rails'
 gem "paperclip", "~> 6.0.0"
 gem 'friendly_id', '~> 5.2.4'
+gem 'redcarpet', '~> 3.4'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
