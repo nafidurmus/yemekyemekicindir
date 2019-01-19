@@ -5,6 +5,11 @@ class FoodsController < ApplicationController
   # GET /foods.json
   def index
     @foods = Food.all
+    if params[:search]
+      @foods = Food.search(params[:search]).order("created_at DESC")
+    else
+      @foods = Food.all.order('created_at DESC')
+    end
   end
 
   # GET /foods/1
@@ -60,6 +65,7 @@ class FoodsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
