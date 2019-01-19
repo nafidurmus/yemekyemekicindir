@@ -2,11 +2,6 @@ module ApplicationHelper
 	require 'redcarpet'
 	require 'redcarpet/render_strip'
 
-	class CodeRayify < Redcarpet::Render::HTML
-		def block_code(code, language)
-		  CodeRay.scan(code,language).div
-		end
-	end
 
 	def markdown(text)
 	    options = {
@@ -29,8 +24,4 @@ module ApplicationHelper
 	    markdown.render(text).html_safe
 	  end
 
-	def strip_markdown(text)
-		markdown_to_plain_text = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
-		markdown_to_plain_text.render(text).html_safe
-	end
 end
