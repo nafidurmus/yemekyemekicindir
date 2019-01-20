@@ -1,0 +1,16 @@
+<% @comments.each do |comment| %>
+  <% if @food.id == comment.food_id %>
+  <div class="card" style="width: 75rem;">
+    <div class="card-header">
+      <h4><%= comment.your_name %> </h4>
+      <h4>food id : <%= comment.food_id %> </h4>
+    </div>
+    <div class="card-body">
+      <p class="card-text"><span><%= comment.note %></span></p>
+    </div>
+    <div class="card-footer text-muted">
+      <%= comment.created_at %>
+    </div>
+  </div>
+  <% end %>
+<% end %>

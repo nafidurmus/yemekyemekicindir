@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  resources :foods
+  
+  resources :foods do 
+  	resources :comments
+  end
   root to: "foods#index"
 end

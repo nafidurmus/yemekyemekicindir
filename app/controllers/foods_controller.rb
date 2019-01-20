@@ -1,10 +1,11 @@
 class FoodsController < ApplicationController
   before_action :set_food, only: [:show, :edit, :update, :destroy]
+  before_action :find_comments, only: [:show]
 
   # GET /foods
   # GET /foods.json
   def index
-    @foods = Food.all
+    @foods = Food.all.order("created_at DESC")
     if params[:search]
       @foods = Food.search(params[:search]).order("created_at DESC")
     else
@@ -15,6 +16,9 @@ class FoodsController < ApplicationController
   # GET /foods/1
   # GET /foods/1.json
   def show
+    @foods = Food.all
+    @comments = Comment.all
+    # @comment = Comment.find(params[:id])
   end
 
   # GET /foods/new
@@ -73,9 +77,15 @@ class FoodsController < ApplicationController
       @food = Food.friendly.find(params[:id])
     end
 
+     def find_comments
+      @comments = Comment.all
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def food_params
       params.require(:food).permit(:title, :repice, :avatar, :prep_time, :cook_time , :level_of_difficulty , :serving_time , :ingredients)
     end
+
+
 end
 

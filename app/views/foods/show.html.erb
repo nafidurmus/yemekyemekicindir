@@ -1,13 +1,11 @@
 <br/>
 <br/>
-	<div class="card" style="width: 75rem; height:85em;">
+	<div class="card" style="width: 75rem;">
 		<center>
 			<h4 class="card-title font-weight-bold"><%= @food.title %></h5>
 		</center>
-	  <img class="card-img-top" src=<%= @food.avatar.url %> alt="Card image cap">
+	  <img class="card-img-top" src=<%= @food.avatar.url %> >
 	  <div class="card-body">
-	    
-
 	    <div class="container navbar-light bg-light">
 		  <div class="row">
 		    <div class="col-md">
@@ -47,10 +45,17 @@
 		</div>
 	  </div>
 	</div>
-
 <center>
+	<%= link_to 'Back', foods_path, :class => "btn btn-light" %> |
 	<%= link_to 'Edit', edit_food_path(@food), :class => "btn btn-light" %> |
-	<%= link_to 'Back', foods_path, :class => "btn btn-light" %>	
+	<%= link_to "Delete", food_path(@food), :class => "btn btn-danger font-weight-bold", method: :delete, data: { confirm: "Are you sure?" } %>
 </center>
+
+
+	<%= render 'comments/form' %>
+	
+	<%= render 'comments/index' %>
+
+	
 
 
