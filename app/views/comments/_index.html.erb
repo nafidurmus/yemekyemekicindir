@@ -1,16 +1,27 @@
-<% @comments.each do |comment| %>
-  <% if @food.id == comment.food_id %>
-  <div class="card" style="width: 75rem;">
-    <div class="card-header">
-      <h4><%= comment.your_name %> </h4>
-      <h4>food id : <%= comment.food_id %> </h4>
-    </div>
-    <div class="card-body">
-      <p class="card-text"><span><%= comment.note %></span></p>
-    </div>
-    <div class="card-footer text-muted">
-      <%= comment.created_at %>
-    </div>
-  </div>
-  <% end %>
-<% end %>
+
+  <div class="container">
+    <div class="row">
+      <% @comments.each do |comment| %>
+      <% if @food.id == comment.food_id %>
+      
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">             
+          <div class="box-part text-center">    
+            <div class="card">
+            <div class="card-header">
+              <h4><%= comment.your_name %> </h4>
+            </div>
+            <div class="card-body">
+              <p class="card-text"><span><%= comment.note %></span></p>
+            </div>
+            <div class="card-footer text-muted">
+              <%= comment.created_at %>
+              <%= comment.id %>
+            </div>    
+            <%= link_to "Delete", food_comment_path(@food, comment.id), :class => "btn btn-danger font-weight-bold", method: :delete, data: { confirm: "Are you sure?" } %>
+          </div>
+        </div>
+        </div>
+      <% end %>
+      <% end %>
+    </div>  
+  </div>  
