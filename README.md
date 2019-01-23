@@ -1,24 +1,35 @@
-# README
+# Yemek yemek içicdir (f^3)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Yemek tarifleri siteye girilir (fotoğraf, yemek adı, pişme süresi , hazırlanma süresi , kaç kişilik olduğu , malzemeler listesi ve tarif). İstenilen tarife yorum yapılabilir. Arama alanından tarifler aranabilir.
 
-Things you may want to cover:
+Uygulama içi ekran resimleri aşağıdadır.
 
-* Ruby version
+![picture](/images/navbar.png)
+------------------
+![picture](/images/index.png)
+------------------
+![picture](/images/yeni_tarif.png)
+------------------
+![picture](/images/show.png)
+------------------
+![picture](/images/yeni_yorum.png)
+------------------
+![picture](/images/yorum_index.png)
+------------------
 
-* System dependencies
+## Kullanılan Teknolojiler
 
-* Configuration
+* [Ruby on Rails](https://rubyonrails.org) - Web framework 
+* [Postgresql](https://www.postgresql.org/) - Database
+* [Bootstrap](https://getbootstrap.com/) - Frontend
+* [Heroku](https://www.heroku.com/) - Cloud Platform
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+## Yapılacaklar 
+- [x] [Yemek tarifleri ekleme]
+- [x] [Tariflere yorum ekleme]
+- [ ] [Kullanıcı ekleme]
+- [ ] [Yorumları beğenme/beğenmeme]
+- [ ] [Open ssl ekleme ]
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
